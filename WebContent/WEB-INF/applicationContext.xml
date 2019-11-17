@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:social="http://www.springframework.org/schema/social"
+	xmlns:facebook="http://www.springframework.org/schema/social/facebook"
+	
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+        http://www.springframework.org/schema/social https://www.springframework.org/schema/social/spring-social.xsd
+        http://www.springframework.org/schema/social/facebook http://www.springframework.org/schema/social/spring-social-facebook.xsd">
+
+	<!-- 
+	<jdbc:embedded-database id="dataSource"	type="H2">
+	</jdbc:embedded-database>
+
+	<bean id="h2Server" class="org.h2.tools.Server"
+		factory-method="createTcpServer" init-method="start"
+		destroy-method="stop" depends-on="h2WebServer">
+		<constructor-arg value="-tcp,-tcpAllowOthers,-tcpPort,9092" />
+	</bean>
+	
+	<bean id="h2WebServer" class="org.h2.tools.Server"
+		factory-method="createWebServer" init-method="start"
+		destroy-method="stop">
+		<constructor-arg value="-web,-webAllowOthers,-webPort,8082" />
+	</bean> 
+	-->
+	
+	<!-- DAO -->
+	<bean id="recipeDao" class="com.fdmgroup.dao.RecipeDao" />
+	<bean id="ingredientDao" class="com.fdmgroup.dao.IngredientDao" />
+	<bean id="userDao" class="com.fdmgroup.dao.UserDao" />
+	
+	<import resource="security-context.xml"/>
+
+</beans>
