@@ -1,0 +1,14 @@
+Note:
+
+Role/Purpose of ContextLoaderListener in Spring?
+https://stackoverflow.com/questions/11815339/role-purpose-of-contextloaderlistener-in-spring
+
+ContextLoaderListener is optional. You have to use it when you want to put your Servlet file in your custom location or with custom name, rather than the default name "[servlet-name]-servlet.xml" and path under "Web-INF/"
+
+Spring 3 MVC Hibernate H2 Embedded database Tutorial
+https://devcases.com/java/spring-3-mvc-hibernate-h2-embedded-database-tutorial/
+
+ContextLoaderListener vs DispatcherServlet
+https://howtodoinjava.com/spring-mvc/contextloaderlistener-vs-dispatcherservlet/
+
+Using Spring Security 5 to integrate with OAuth 2-secured services such as Facebook and GitHub
